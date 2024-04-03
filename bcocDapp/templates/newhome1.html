@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>B-coc</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="{{url_for('static',filename='static/images/icons/favicon.ico')}}"/>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='fonts/Linearicons-Free-v1.0.0/icon-font.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='vendor/animate/animate.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='vendor/animsition/css/animsition.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='vendor/select2/select2.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='vendor/daterangepicker/daterangepicker.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/util.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/nav.css')}}">
+
+</head>
+        <body onload="myFunction()" style="margin:0;">
+                <ul class="topnav">
+                        <li class="active"><a href="create.html"><font size="4">Create Evidence</font></a></li>
+                        <li class="active"><a href="transfer.html"><font size="4">Transfer Evidence</font></a></li>
+                        <li class="active"><a href="getevidence.html"><font size="4">Get Evidence</font></a></li>
+                        <li class="right"><a href="login.html"><font size= "4">LOGOUT</font></a></li>
+                </ul>
+            </div>
+	
+                <div class="limiter">
+                    <div class="container-login100">
+                        <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+                            <form class="login100-form validate-form">
+                                <span class="login100-form-title p-b-49">
+                                    Submitting Activity
+                                </span>
+                                
+                                <span class="label-input100"><b>Name and Title of the Person Receiving the Item</span></b>
+                                <div class="wrap-input100 validate-input m-b-23" data-validate = "Name is required">
+                                    
+                                    <input class="input100" type="text" name="fname" id="fname" placeholder="Enter your name">
+                                    <span class="focus-input100"></span>
+                                </div>
+                                <span class="label-input100"><b>Address</span></b>
+                                <div class="wrap-input100 validate-input m-b-23" data-validate = "Address is required">
+                                    
+                                    <input class="input100" type="text" name="ads" id="ads" placeholder="Enter your address">
+                                    <span class="focus-input100"></span>
+                                </div>
+                                <span class="label-input100"><b>Evidence ID</span></b>
+                                <div class="wrap-input100 validate-input m-b-23" data-validate = "Evidence id is required">
+                                    
+                                    <input class="input100" type="number" name="phone" id="phone" placeholder="Enter evidence ID...">
+                                    <span class="focus-input100"></span>
+                                </div>
+                                <span class="label-input100"><b>Location from where Obtained</span></b>
+                                <div class="wrap-input100 validate-input m-b-23" data-validate = "Location is required">
+                                    
+                                    <input class="input100" type="text" name="location" id="location" placeholder="Enter the location">
+                                    <span class="focus-input100"></span>
+                                </div>
+                                <span class="label-input100"><b>Item Description</span></b>
+                                <div class="wrap-input100 validate-input m-b-23" data-validate = "Item Description is required">
+                                    
+                                    <input class="input100" type="text" name="itemdesc" id="itemdesc" placeholder="Enter Item Description">
+                                    <span class="focus-input100"></span>
+                                </div>
+                                <span class="label-input100"><b>Date Collected</span></b>
+                                <div class="wrap-input100 validate-input m-b-23" data-validate ="Date is required">
+                                    
+                                    <input class="input100" type="date" name="datecol" id="datecol" placeholder="Enter the date">
+                                    <span class="focus-input100"></span>
+                                </div>
+                                <span class="label-input100"><b>Time Collected</span></b>
+                                <div class="wrap-input100 validate-input m-b-23" data-validate = "Time is required">
+                                    
+                                    <input class="input100" type="time" name="timecol" id="timecol" placeholder="Enter the time">
+                                    <span class="focus-input100"></span>
+                                </div>
+                                <div class="container-contact100-form-btn">
+                                        <button class="contact100-form-btn" onclick="myFunction1()">
+                                            SUBMIT
+                                        </button>
+                                </div>
+                            
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!--===============================================================================================-->
+	<script src="{{url_for('static',filename='vendor/jquery/jquery-3.2.1.min.js')}}"></script>
+    <!--===============================================================================================-->
+        <script src="{{url_for('static',filename='vendor/animsition/js/animsition.min.js')}}"></script>
+    <!--===============================================================================================-->
+        <script src="{{url_for('static',filename='vendor/bootstrap/js/popper.js')}}"></script>
+        <script src="{{url_for('static',filename='vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+    <!--===============================================================================================-->
+        <script src="{{url_for('static',filename='vendor/select2/select2.min.js')}}"></script>
+    <!--===============================================================================================-->
+        <script src="{{url_for('static',filename='vendor/daterangepicker/moment.min.js')}}"></script>
+        <script src="{{url_for('static',filename='vendor/daterangepicker/daterangepicker.js')}}"></script>
+    <!--===============================================================================================-->
+        <script src="{{url_for('static',filename='vendor/countdowntime/countdowntime.js')}}"></script>
+    <!--===============================================================================================-->
+        <script src="{{url_for('static',filename='js/main.js')}}"></script>
+        <script>
+            var myVar;
+            
+            function myFunction() {
+              myVar = setTimeout(showPage, 250);
+            }
+            
+            function showPage() {
+              document.getElementById("loader").style.display = "none";
+              document.getElementById("myDiv").style.display = "block";
+            }
+            function myFunction1() {
+              alert("Evidence Details have been logged, Thank You!");
+            }
+            </script>
+    
+            </body>
+    </html>

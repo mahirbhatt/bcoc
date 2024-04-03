@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B-CoC</title>
+<style>
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+ 	font-size: 17px;
+ 	padding: 8px;
+
+}
+* {
+  box-sizing: border-box;
+}
+
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #124da2;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right,
+  ul.topnav li {float: none;}
+}
+
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #124da2;
+  color: white;
+  padding: 16px 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+
+}
+
+.btn:hover {
+  background-color: DodgerBlue;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid #5e656e;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #124da2;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+input[type=submit]:hover {
+  background-color: DodgerBlue;
+}
+
+div.container {
+  border-radius: 5px;
+  background-color: white;
+  padding: 100px;
+}
+
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+</style>
+</head>
+<body onload="myFunction()" style="margin:0;">
+
+<div id="loader"></div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+
+</ul>
+
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="" method='post' enctype="multipart/form-data">
+      
+        <div class="row">
+          <div class="col-50">
+            <h2 align=center>SUBMITTING ACTIVITY</h2>
+         <br>
+    
+            <label for="fname" align=left></i>Name and Title of Person Receiving 
+            Item:</label>
+            <input type="text" id="fname" name="fname" placeholder="Enter Name">
+            
+            <div class="row">
+              <div class="col-50">
+                <label for="ads" align=left></i>Address:</label>
+            	<input type="text" id="ads" name="ads" placeholder="Enter Address">
+              </div>
+              <div class="col-50">
+                <label for="phone" align=left>Evidence ID:</label>
+                <input type="text" id="phone" name="phone" placeholder="">
+              </div>
+            </div>
+           
+            <label for="fname" align=left></i>Location from Where Obtained:</label>
+            <input type="text" id="location" name="location" placeholder="Enter Location">
+            
+            <label for="fname" align=left></i>Item Description:</label>
+            <input type="text" id="itemdes" name="itemdesc" placeholder="Description here...">
+
+            <div class="row">
+              <div class="col-25">
+                <label for="datecol" align=left></i>Date Collected:</label>
+            	<input type="text" id="datecol" name="datecol" placeholder="dd/mm/yyyy">
+              </div>
+              <div class="col-25">
+                <label for="time" align=left>Time Collected:</label>
+                <input type="text" id="timecol" name="timecol" placeholder="hr:min:sec">
+              </div>
+            </div>
+
+          </div>
+
+        
+            </div>
+          </div>
+          <dl>
+            <p>
+              <input type="file" name="files[]" multiple="true" autocomplete="off" required>
+            </p>
+          </dl>
+          
+            <p>
+            <input type="submit" value="Submit">
+          </p>
+        </div><br>
+
+        <input type="submit" value="Submit" class="btn" onclick="myFunction1()">
+</body>
+</div>
+
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 250);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+function myFunction1() {
+  alert("Evidence Details have been logged, Thank You!");
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+

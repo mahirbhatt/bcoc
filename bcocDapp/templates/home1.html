@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Judicial System | Create Evidence</title>
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/swc.css">
+		<script src="js/modernizr.custom.25376.js"></script>
+	</head>
+	<body>
+		<div id="perspective" class="perspective effect-laydown">
+			<div class="container">
+				<div class="wrapper"><!-- wrapper needed for scroll -->
+					<!-- Top Navigation -->
+					<div class="column">
+						<a><button id="showMenu">Menu</button></a>
+					</div>
+					<div>
+						<p align="right",onclick="window.open('{{ url_for('login') }}', '_top')"><button onclick="alert('Logged Out Successfully!'),window.open('{{ url_for('login') }}', '_top')">Logout</button></p>
+					</div>
+				</div><!-- wrapper -->
+				<div class="row">
+						<div class="col-75">
+						  <div class="container1">
+							<form action="" method='post' enctype="multipart/form-data">
+								{% if message %}
+								<p align="center" class="message"><strong>Message:</strong> {{ message }}
+									  
+								{% endif %}
+								<br>
+								<br>
+							  <div class="row">
+								<div class="col-50">
+								  <h2 align=center>CREATE EVIDENCE</h2>
+							   <br>
+						  
+								  <label for="fname" align=left>Name and Title of Person Receiving 
+								  Item:</label>
+								  <input type="text" id="fname" name="fname" placeholder="Enter Name" value={{fname}}>
+								  
+								  <div class="row">
+									<div class="col-50">
+									  <label for="ads" align=left>Address:</label>
+									  <input type="text" id="ads" name="ads" placeholder="Enter Address" value={{ads}}>
+									</div>
+									<div class="col-50">
+									  <label for="eid" align=left>Evidence ID:</label>
+									  <input type="text" id="eid" name="eid" placeholder="" value={{eid}}> 
+									</div>
+								  </div>
+								 
+								  <label for="fname" align=left>Location from Where Obtained:</label>
+								  <input type="text" id="location" name="location" placeholder="Enter Location" value={{location}}>
+								  
+								  <label for="fname" align=left>Item Description:</label>
+								  <input type="text" id="itemdes" name="itemdesc" placeholder="Description here..." value={{itemdesc}}>
+					  
+								  <div class="row">
+									<div class="col-25">
+									  <label for="datecol" align=left>Date Collected:</label>
+									  <input type="date" id="datecol" name="datecol" placeholder="dd/mm/yyyy" value={{datecol}}>
+									</div>
+									<div class="col-25">
+									  <label for="time" align=left>Time Collected:</label>
+									  <input type="time" id="timecol" name="timecol" placeholder="hr:min:sec" value={{timecol}}>
+									</div>
+								  </div>
+					  
+								</div>
+								
+								
+								
+								  </div><br><br><br>
+								  <h2 align=center>CONTACT DETAILS</h2><br>
+								  <div class="row">
+									  <div class="col-50">
+										<label for="ads" align=left></i>Collection Technician Name:</label>
+									  <input type="text" id="TechnicianName" name="TechnicianName" placeholder="Enter Address" value={{TechnicianName}}>
+									  </div>
+									  <div class="col-50">
+										<label for="eviId" align=left>Evidence ID:</label>
+										<input type="text" id="eviId" name="eviId" placeholder="" value={{eviId}}>
+									  </div>
+								  </div>
+								  <div class="row">
+									  <div class="col-50">
+										<label for="Title" align=left></i>Company/Title:</label>
+									  <input type="text" id="Title" name="Title" placeholder="Enter Company/Title" value={{Title}}>
+									  </div>
+									  <div class="col-50">
+										<label for="starttime" align=left>Start Time:</label>
+										<div align="left">
+										<input type="time" id="starttime" name="starttime" placeholder="hr:min:" value={{starttime}}>
+										</div>
+									  </div>
+								  </div>
+								  <div class="row">
+									  <div class="col-50">
+										<label for="OfficeLoca" align=left></i>Office Location:</label>
+									  <input type="text" id="OfficeLoca" name="OfficeLoca" placeholder="Enter Office Location" value={{OfficeLoca}}>
+									  </div>
+									  <div class="col-50">
+										<label for="endtime" align=left>End Time:</label>
+										<div align="left">
+										<input type="time" id="endtime" name="endtime" placeholder="hr:min:" value={{endtime}}>
+										</div>
+									  </div>
+								  </div>
+								  <div class="row">
+									  <div class="col-50">
+										<label for="CollectionLoca" align=left></i>Collection Location</label>
+									  <input type="text" id="CollectionLoca" name="CollectionLoca" placeholder="Enter Collection Location" value={{CollectionLoca}}>
+									  </div>
+									  <div class="col-50">
+										<label for="Address" align=left>Address:</label>
+										<input type="text" id="Address" name="Address" placeholder="Enter Address" value={{Address}}>
+									  </div>
+								  </div>
+								  <div class="row">
+									  <div class="col-25">
+										<label for="City" align=left></i>City</label>
+									  <input type="text" id="City" name="City" placeholder="Enter City" value={{City}}>
+									  </div>
+									  <div class="col-25">
+										<label for="State" align=left>State:</label>
+										<input type="text" id="State" name="State" placeholder="Enter State" value={{State}}>
+									  </div>
+									  <div class="col-25">
+										  <label for="Zip" align=left>ZipCode:</label>
+										  <input type="text" id="Zip" name="Zip" placeholder="Enter Zipcode" value={{Zip}}>
+									  </div>
+									  <div class="col-25">
+											<label for="Country" align=left>Country:</label>
+											<input type="text" id="Country" name="Country" placeholder="Enter Country" value={{Country}}>
+									  </div>
+									  <div class="col-25">
+										  <label for="Phone" align=left>Phone:</label>
+										  <div align="left">
+										  <input type="text" id="Phone" name="Phone" placeholder="Enter Phone" value={{Phone}}>
+										  </div><br>
+									  </div>
+					  
+								  </div>
+								  <div class="row">
+									  <div class="col-50">
+										<label for="EvidenceRecei" align=left></i>Evidence Received From</label>
+									  <input type="text" id="EvidenceRecei" name="EvidenceRecei" placeholder="Enter Evidence Received From" value={{EvidenceRecei}}>
+									  </div>
+									  <div class="col-50">
+										<label for="Title2" align=left>Title:</label>
+										<input type="text" id="Title2" name="Title2" placeholder="Enter Title" value={{Title2}}>
+									  </div>
+								  </div>
+								  <div class="row">
+									  <div class="col-50">
+										<label for="OfficeAds" align=left>Office Address</i></label>
+									  <input type="text" id="OfficeAds" name="OfficeAds" placeholder="Enter Office Address" value={{OfficeAds}}>
+									  </div>
+								  </div>
+								  <div class="row">
+									  <div class="col-25">
+										<label for="City2" align=left></i>City</label>
+									  <input type="text" id="City2" name="City2" placeholder="Enter City" value={{City2}}>
+									  </div>
+									  <div class="col-25">
+										<label for="State2" align=left>State:</label>
+										<input type="text" id="State2" name="State2" placeholder="Enter State" value={{State2}}>
+									  </div>
+									  <div class="col-25">
+										  <label for="Zip2" align=left>ZipCode:</label>
+										  <input type="text" id="Zip2" name="Zip2" placeholder="Enter Zipcode" value={{Zip2}}>
+									  </div>
+									  <div class="col-25">
+											<label for="Country2" align=left>Country:</label>
+											<input type="text" id="Country2" name="Country2" placeholder="Enter Country" value={{Country2}}>
+									  </div>
+									  <div class="col-25">
+										  <label for="Phone2" align=left>Phone:</label>
+										  <div align="left">
+										  <input type="text" id="Phone2" name="Phone2" placeholder="Enter Phone" value={{Phone2}}>
+										  </div><br>
+									  </div>
+								  </div>
+								  <div class="row">
+									  <div class="col-50">
+										<label for="MachineOwn" align=left></i>Machine Owner/Custodian</label>
+									  <input type="text" id="MachineOwn" name="MachineOwn" placeholder="Enter MachineOwner/Custodian" value={{MachineOwn}}>
+									  </div>
+									  <div class="col-50">
+										<label for="Title3" align=left>Title:</label>
+										<input type="text" id="Title3" name="Title3" placeholder="Enter Title" value={{Title3}}>
+									  </div>
+								  </div>
+								  <div class="row">
+									  <div class="col-50">
+										<label for="OfficeAdds" align=left></i>Office Address</label>
+									  <input type="text" id="OfficeAdds" name="OfficeAdds" placeholder="Enter Office Address" value={{OfficeAdds}}>
+									  </div>
+								  </div>
+								  <div class="row">
+									  <div class="col-25">
+										<label for="City3" align=left></i>City</label>
+									  <input type="text" id="City3" name="City3" placeholder="Enter City" value={{City3}}>
+									  </div>
+									  <div class="col-25">
+										<label for="State3" align=left>State:</label>
+										<input type="text" id="State3" name="State3" placeholder="Enter State" value={{State3}}>
+									  </div>
+									  <div class="col-25">
+										  <label for="Zip3" align=left>ZipCode:</label>
+										  <input type="text" id="Zip3" name="Zip3" placeholder="Enter Zipcode" value={{Zip3}}>
+									  </div>
+									  <div class="col-25">
+											<label for="Country3" align=left>Country:</label>
+											<input type="text" id="Country3" name="Country3" placeholder="Enter Country" value={{Country3}}>
+									  </div>
+									  <div class="col-25">
+										  <label for="Phone3" align=left>Phone:</label>
+										  <div align="left">
+										  <input type="text" id="Phone3" name="Phone3" placeholder="Enter Phone" value={{Phone3}}>
+										  </div>
+									  </div>
+								  </div><br><br><br>
+								  <h2 align=center>COMPUTER/DEVICE</h2><br>
+								  <div class="row"><br><br><br>
+										  <label for="Computer" align=left>Was Computer on?</label><br>
+								  
+										  <label class="checkbox-inline">
+											  <input type="checkbox" value="yes">YES
+											</label>
+											<label class="checkbox-inline">
+											  <input type="checkbox" value="no">NO
+										  </label>
+								  </div>
+								  <div class="row"><br><br><br>
+									  <label for="Computer" align=left>If YES,Shutdown for Collection:</label>
+							  
+									  <label class="checkbox-inline">
+										  <input type="checkbox" value="yes">YES
+										</label>
+										<label class="checkbox-inline">
+										  <input type="checkbox" value="no">NO
+									  </label>
+								  </div>
+								  <div class="row"><br><br><br>
+									  <label for="Computer" align=left>Was Computer Connected to a Network?:</label><br>
+							  
+									  <label class="checkbox-inline">
+										  <input type="checkbox" value="yes">YES
+										</label>
+										<label class="checkbox-inline">
+										  <input type="checkbox" value="no">NO
+									  </label>
+								  </div>
+								  <div class="row"><br><br><br>
+									  <label for="Computer" align=left>If YES,Disconnected for Collection:</label><br>
+							  
+									  <label class="checkbox-inline">
+										  <input type="checkbox" value="yes">YES
+										</label>
+										<label class="checkbox-inline">
+										  <input type="checkbox" value="no">NO
+									  </label>
+								  </div>
+								  <div class="row"><br>
+									<label for="typeofcomp" align=left>Type Of Computer:</label>
+									<select name="comp">
+										<option value="Desktop">Desktop</option>
+										<option value="Laptop">Laptop</option>
+										<option value="Server">Server</option>
+										<option value="NAS Device">NAS Device</option>
+										<option value="Other">Other</option>
+									</select>
+								  </div><br><br>
+								  <div class="row">
+									  <div class="col-50">
+										<label for="DescNet" align=left>Describe Network or Modem Activity Observed:</i></label>
+									  <input type="text" id="DescNet" name="DescNet" placeholder="Enter Network or Modem Activity Observed" value={{DescNet}}>
+									  </div>
+								  </div>
+								  <div class="row">
+									  <div class="col-50">
+										<label for="DescProg" align=left>Describe Programs Running or Documents in use:</i></label>
+									  <input type="text" id="DescProg" name="DescProg" placeholder="Enter Network or Modem Activity Observed" value={{DescProg}}>
+									  </div>
+								  </div>
+								  <div class="row">
+									  <div class="col-50">
+										<label for="DescMac" align=left>Describe Machine Condition</i></label>
+									  <input type="text" id="DescMac" name="DescMac" placeholder="Enter Machine Condition" value={{DescMac}}>
+									  </div>
+								  </div>
+								  <div class="row">
+									  <div class="col-50">
+										<label for="DescExt" align=left>Describe Any External Labels/Stickers</i></label>
+									  <input type="text" id="DescExt" name="DescExt" placeholder="Enter any external labels/stickers" value={{DescExt}}>
+									  </div>
+								  </div>
+								  <div class="row">
+									  <div class="col-50">
+										<label for="OS" align=left>Operating System</i></label>
+									  <input type="text" id="OS" name="OS" placeholder="Enter OS used" value={{OS}}>
+									  </div>
+									  <div class="col-50">
+										  <label for="emailtype" align=left>Email Type</i></label>
+										<input type="text" id="emailtype" name="emailtype" placeholder="Enter emailtype used" value={{emailtype}}>
+										</div>
+								  </div>
+								  <div class="row">
+									  <div class="col-50">
+										<label for="systime" align=left>System Date/Time</i></label>
+										<div align="left">
+									  <input type="time" id="systime" name="systime" placeholder="Enter system date/time used" value={{systime}}>
+										</div>
+									  </div>
+									  <div class="col-50">
+										  <label for="acttime" align=left>Actual Date/Time</i></label>
+										  <div align="left">
+										<input type="time" id="acttime" name="acttime" placeholder="Enter actual date/time used" value={{acttime}}>
+										  </div><br>
+										</div>
+								  </div>
+								  <div class="row">
+									<div class="col-50">
+									  <label for="harddrive" align=left>Number of Hard Drive(s):</i></label>
+									<input type="text" id="harddrive" name="harddrive" placeholder="Enter no of hard drive" value={{harddrive}}>
+									</div>
+								  </div><br>
+								  <div class="row"><br>
+									<label for="morethan" align=left>If more than one,then select:</label>
+									<select name="morethan">
+										<option value="Master/Slave">Master/Slave</option>
+										<option value="Dynamic">Dynamic</option>
+										<option value="RAID">RAID</option>
+									</select>
+								  </div><br>
+								  <div class="row">
+									<div class="col-50">
+									  <label for="acquisition" align=left>If Drive was Removed before Acquisition-by whom:</i></label>
+									<input type="text" id="acquisition" name="acquisition" placeholder="" value={{acquisition}}>
+									</div>
+								  </div><br>
+								  <div class="row"><br>
+									<label for="mediadevices" align=left>Other Media Devices Present:</label>
+									<select name="mediadevices">
+										<option value="Floppy">Floppy</option>
+										<option value="CD">CD</option>
+										<option value="DVD">DVD</option>
+										<option value="CD/DVD">CD/DVD</option>
+										<option value="Other">Other</option>
+									</select>
+								  </div><br>
+								  <div class="row">
+									<div class="col-50">
+									  <label for="DescShut" align=left>Describe Computer Shutdown Method:</i></label>
+									  <div align="left">
+									<textarea rows="8" cols="130" style="align-content:left"></textarea>
+									</div>
+									</div>
+								  </div><br>
+								  <div class="row"><br><br><br>
+									<label for="MachineSei" align=left>Machine Seized?:</label><br>
+							
+									<label class="checkbox-inline">
+										<input type="checkbox" value="yes">YES
+									  </label>
+									  <label class="checkbox-inline">
+										<input type="checkbox" value="no">NO
+									</label>
+								  </div>
+								  <div class="row"><br><br><br>
+									<label for="MachineImg" align=left>Machine Imaged?:</label><br>
+							
+									<label class="checkbox-inline">
+										<input type="checkbox" value="yes">YES
+									  </label>
+									  <label class="checkbox-inline">
+										<input type="checkbox" value="no">NO
+									</label>
+								  </div>
+								  <div class="row"><br><br><br>
+									<label for="MachinePhoto" align=left>Machine Photographed?:</label><br>
+							
+									<label class="checkbox-inline">
+										<input type="checkbox" value="yes">YES
+									  </label>
+									  <label class="checkbox-inline">
+										<input type="checkbox" value="no">NO
+									</label>
+								  </div><br>
+								  <h2 align=center>ACQUISITION</h2><br>
+								  <div class="row">
+									<div class="col-50">
+									  <label for="EviImg" align=left></i>Evidence Imaged</label>
+									<input type="text" id="EviImg" name="EviImg" placeholder="" value={{EviImg}}>
+									</div>
+									<div class="col-50">
+									  <label for="Make" align=left>Make:</label>
+									  <input type="text" id="Make" name="Make" placeholder="Enter Make" value={{Make}}>
+									</div>
+									<div class="col-50">
+										<label for="Model" align=left>Model:</label>
+										<input type="text" id="Model" name="Model" placeholder="Enter Model" value={{Model}}>
+									</div>
+									<div class="col-50">
+										  <label for="Size" align=left>Size:</label>
+										  <input type="text" id="Size" name="Size" placeholder="Enter Size" value={{Size}}>
+									</div>
+									<div class="col-50">
+										<label for="Serial" align=left>Serial#:</label>
+										<input type="text" id="Serial" name="Serial" placeholder="Enter Serial" value={{Serial}}>
+									</div>
+									<div class="col-50">
+									  <label for="Type" align=left>Type:</label>
+									  <input type="text" id="Type" name="Type" placeholder="Enter Type" value={{Type}}>
+									</div>
+									<div class="col-50">
+									  <label for="DestDrive" align=left>Destination Drive:</label>
+									  <input type="text" id="DestDrive" name="DestDrive" placeholder="Enter DestDrive" value={{DestDrive}}>
+									</div>
+									<div class="col-50">
+									  <label for="Model2" align=left>Model:</label>
+									  <input type="text" id="Model2" name="Model2" placeholder="Enter Model" value={{Model2}}>
+									</div>
+									<div class="col-50">
+									  <label for="Serial2" align=left>Serial#:</label>
+									  <input type="text" id="Serial2" name="Serial2" placeholder="Enter Serial#" value={{Serial2}}>
+									</div>
+								  </div>
+								  <div class="row">
+									<div class="col-50">
+									  <label for="ImgSoft" align=left>Imaging Software:</label>
+									  <input type="text" id="ImgSoft" name="ImgSoft" placeholder="Enter Imaging Software" value={{ImgSoft}}>
+									</div>
+									<div class="col-50">
+									  <label for="SoftVer" align=left>Software Version:</label>
+									  <input type="text" id="SoftVer" name="SoftVer" placeholder="Enter Software Version" value={{SoftVer}}> 
+									</div>
+									<div class="col-50">
+									  <label for="ImgHard" align=left>Imaging Hardware:</label>
+									  <input type="text" id="ImgHard" name="ImgHard" placeholder="Enter Imaging Hardware" value={{ImgHard}}>
+									</div>
+									<div class="col-50">
+									  <label for="HardVer" align=left>Hardware Version:</label>
+									  <input type="text" id="HardVer" name="HardVer" placeholder="Enter Hardware Version" value={{HardVer}}>
+									</div>
+								  </div><br>
+								  <div class="row"><br><br><br>
+									  <label for="Compression" align=left>Compression?:</label><br>
+							  
+									  <label class="checkbox-inline">
+										  <input type="checkbox" value="yes">YES
+										</label>
+										<label class="checkbox-inline">
+										  <input type="checkbox" value="no">NO
+									  </label>
+								  </div><br>
+								  <div class="row">
+									  <div class="col-50">
+										  <label for="CompressType" align=left>Compression Type:</label>
+										  <input type="text" id="CompressType" name="CompressType" placeholder="" value={{CompressType}}>
+									  </div>
+								  </div>
+								  <div class="row">
+									  <div class="col-50">
+										  <label for="ImgHash" align=left>Image Hash:</label>
+										  <input type="text" id="ImgHash" name="Image Hash" placeholder="" value={{ImgHash}}>
+									  </div>
+									  <div class="col-50">
+										  <label for="VeriHash" align=left>Verification Hash:</label>
+										  <input type="text" id="VeriHash" name="VeriHash" placeholder="" value={{VeriHash}}>
+									  </div>
+								  </div>
+								  <div class="row">
+									  <div class="col-50">
+										  <label for="VeriMethod" align=left>Verification Method:</label>
+										  <input type="text" id="VeriMethod" name="VeriMethod" placeholder="" value={{VeriMethod}}>
+									  </div>               
+								  </div><br>
+								  <div class="row"><br><br><br>
+									
+									<label for="Verified" align=left>Verified?:</label><br>
+							
+									<label class="checkbox-inline">
+										<input type="checkbox" value="yes">YES
+									  </label>
+									  <label class="checkbox-inline">
+										<input type="checkbox" value="no">NO
+									</label>
+								</div>
+								<div class="row">
+									<div class="col-50">
+									  <label for="AddComm" align=left>Additional Comments:</i></label>
+									  <div align="left">
+									<textarea rows="8" cols="130" style="align-content:center"></textarea>
+									</div>
+									</div>
+								  
+							  </div>
+								  <dl>
+									<p>
+									  <input type="file" name="files[]" multiple="true" autocomplete="off" required>
+									</p>
+								  </dl>
+								</div>
+					  
+							  </div><br>
+					  
+							  <input type="submit" value="Submit" class="btn">
+							
+						
+				</div>
+			</div><!-- /container -->
+			
+			<nav class="outer-nav top horizontal">
+				<a href="home1.html">Create Evidence</a>
+				<a href="transferevi.html">Transfer Evidence</a>
+				<a href="#">Update Evidence</a>
+				<a href="getevi.html">Get Evidence</a>
+			</nav>
+		</div><!-- /perspective -->
+		<script src="js/classie.js"></script>
+		<script src="js/menu.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script> 
+		<script src="js/swc.js"></script>
+
+	</body>
+</html>

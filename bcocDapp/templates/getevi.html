@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Judicial System | Get Evidence</title>
+		<link rel="icon" href="eth.png">
+		<link rel="stylesheet" type="text/css" href="">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.25376.js"></script>
+	</head>
+	<body>
+		<div id="perspective" class="perspective effect-laydown">
+			<div class="container">
+				<div class="wrapper"><!-- wrapper needed for scroll -->
+					<!-- Top Navigation -->
+					<div class="column">
+						<a><button id="showMenu">Menu</button></a>
+					</div>
+					<div>
+						<p align="right",onclick="window.open('{{ url_for('login') }}', '_top')"><button onclick="alert('Logged Out Successfully!'),window.open('{{ url_for('login') }}', '_top')">Logout</button></p>
+					</div>
+        </div><!-- wrapper -->
+
+        <div class="row">
+          <div class="col-75">
+            <div class="container1">
+            <form action="" method='post' enctype="multipart/form-data">
+              <div class="row">
+              <div class="col-50">
+                <h2 align=center> GET EVIDENCE</h2>
+            <div class="container1">
+              <label for="eid"><b>Evidence ID:</b></label>
+                <input type="text" placeholder="Enter Evidence ID" name="eid" >
+            <p class="w3-text-blue">{{ file_info }}</p>
+            {% if error %}
+              <p align="center" class="error"><strong>Error:</strong> {{ error }}
+            {% endif %}
+              <br>
+              <br>
+              <br>
+                <input type="submit" value="Submit" class="btn">
+              </form>
+              
+            </div>
+          </div><!-- /container -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          <nav class="outer-nav top horizontal">
+            <a href="home1.html">Create Evidence</a>
+            <a href="transferevi.html">Transfer Evidence</a>
+            <a href="#">Update Evidence</a>
+            <a href="getevi.html">Get Evidence</a>
+          </nav>
+        
+      
+    
+  
+
+        </div><!-- /perspective -->
+        <script src="js/classie.js"></script>
+        <script src="js/menu.js"></script>
+      </body>
+    </html>
